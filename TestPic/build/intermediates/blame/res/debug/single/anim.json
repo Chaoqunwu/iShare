@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_in.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\anim\\push_bottom_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_in_2.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\anim\\push_bottom_in_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\anim\\hold.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\anim\\hold.xml"
+    },
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\anim\\fade_ins.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\anim\\fade_ins.xml"
+    },
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\anim\\push_up_out.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\anim\\push_up_out.xml"
+    }
+]

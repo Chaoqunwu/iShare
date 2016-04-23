@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\layout\\activity_image_bucket.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\layout\\activity_image_bucket.xml"
+    },
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\layout\\item_image_grid.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\layout\\item_image_grid.xml"
+    },
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\layout\\activity_selectimg.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\layout\\activity_selectimg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\layout\\activity_image_grid.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\layout\\activity_image_grid.xml"
+    },
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\layout\\item_image_bucket.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\layout\\item_image_bucket.xml"
+    },
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\layout\\item_published_grida.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\layout\\item_published_grida.xml"
+    },
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\layout\\item_popupwindows.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\layout\\item_popupwindows.xml"
+    },
+    {
+        "merged": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\build\\intermediates\\res\\merged\\debug\\layout\\activity_photo.xml",
+        "source": "C:\\Users\\Saltwater\\Desktop\\BrandNewWorld\\TestPic\\src\\main\\res\\layout\\activity_photo.xml"
+    }
+]

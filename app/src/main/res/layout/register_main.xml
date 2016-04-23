@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/login_pic_test3">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textSize="30dp"
+        android:id="@+id/textView注册"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/textView注册"
+        android:layout_centerHorizontal="true">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ishare已经等你好久啦"
+            android:textColor="#0795f4"
+            android:textSize="20dp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="昵称"
+                android:background="@drawable/editsharp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+
+            <EditText
+                android:id="@+id/phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="手机号"
+                android:background="@drawable/editsharp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="密码"
+                android:background="@drawable/editsharp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="验证码"
+                android:background="@drawable/editsharp"/>
+
+            <Button
+                android:id="@+id/vCode"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取验证码"
+                android:textSize="20dp"
+                android:background="@null"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textSize="20dp"
+        android:id="@+id/button"
+        android:background="@null"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp">
+
+        <!--<CheckBox-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="我已经阅读并同意app的使用条件和隐私声明"/>-->
+    </LinearLayout>
+
+
+    <!--<EditText-->
+        <!--android:layout_below="@+id/linearLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:id="@+id/editText注册用户姓名"-->
+        <!--android:inputType="text"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:background="@drawable/border1"-->
+        <!--android:hint="亲 输入您的姓名"/>-->
+
+    <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:id="@+id/editText注册账号"-->
+        <!--android:inputType="number"-->
+        <!--android:layout_below="@+id/linearLayout"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="100dp"-->
+        <!--android:background="@drawable/border1"-->
+        <!--android:hint="亲 输入您的手机号"/>-->
+
+    <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:id="@+id/editText注册密码"-->
+        <!--android:inputType="textPassword"-->
+        <!--android:layout_below="@+id/editText注册账号"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:background="@drawable/border1"-->
+        <!--android:hint="亲 输入您的密码"/>-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="我已经阅读并同意app的使用条件和隐私声明"-->
+        <!--android:id="@+id/checkBox"-->
+        <!--android:layout_below="@+id/editText注册密码"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginTop="30dp" />-->
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:text="注册"-->
+        <!--android:textSize="20dp"-->
+        <!--android:id="@+id/button注册"-->
+        <!--android:layout_below="@+id/checkBox"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:background="#eed303"-->
+        <!--android:layout_margin="20dp"/>-->
+
+
+</RelativeLayout>

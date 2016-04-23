@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray">
+
+    <include
+        layout="@layout/tool_bar_before"
+        android:id="@+id/list_tool_bar_before" />
+
+    <com.cjj.MaterialRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:overlay="false"
+        app:wave_show="true"
+        app:isLoadMore="true"
+        app:wave_color="@color/light_gray"
+        >
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </ListView>
+
+    </com.cjj.MaterialRefreshLayout>
+
+
+
+</LinearLayout>
