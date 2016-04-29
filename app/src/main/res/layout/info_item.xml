@@ -3,7 +3,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@color/light_gray"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -82,85 +83,95 @@
             android:textSize="14dp"
             android:text="So cooooooooool"/>
 
-        <TableLayout
+        <!--<TableLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:paddingTop="15dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:stretchColumns="1">-->
+            <!--<TableRow-->
+                <!--android:visibility="visible">-->
+            <!--<ImageView-->
+                <!--android:id="@+id/list_image"-->
+                <!--android:layout_width="@dimen/list_image_width"-->
+                <!--android:layout_height="@dimen/list_image_height"-->
+                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+                <!--android:src="@drawable/avatar_temp"-->
+                <!--android:visibility="visible"/>-->
+            <!--<ImageView-->
+                <!--android:id="@+id/list_image2"-->
+                <!--android:layout_width="@dimen/list_image_width"-->
+                <!--android:layout_height="@dimen/list_image_height"-->
+                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+                <!--android:src="@drawable/avatar_temp"-->
+                <!--android:visibility="invisible"/>-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/list_image3"-->
+                    <!--android:layout_width="@dimen/list_image_width"-->
+                    <!--android:layout_height="@dimen/list_image_height"-->
+                    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+                    <!--android:src="@drawable/avatar_temp"-->
+                    <!--android:visibility="invisible"/>-->
+            <!--</TableRow>-->
+            <!--<TableRow-->
+                <!--android:visibility="gone">-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/list_image4"-->
+                    <!--android:layout_width="@dimen/list_image_width"-->
+                    <!--android:layout_height="@dimen/list_image_height"-->
+                    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+                    <!--android:src="@drawable/avatar_temp"-->
+                    <!--android:visibility="visible"/>-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/list_image5"-->
+                    <!--android:layout_width="@dimen/list_image_width"-->
+                    <!--android:layout_height="@dimen/list_image_height"-->
+                    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+                    <!--android:src="@drawable/avatar_temp"-->
+                    <!--android:visibility="visible"/>-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/list_image6"-->
+                    <!--android:layout_width="@dimen/list_image_width"-->
+                    <!--android:layout_height="@dimen/list_image_height"-->
+                    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+                    <!--android:src="@drawable/avatar_temp"-->
+                    <!--android:visibility="visible"/>-->
+            <!--</TableRow>-->
+            <!--<TableRow-->
+                <!--android:visibility="gone">-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/list_image7"-->
+                    <!--android:layout_width="@dimen/list_image_width"-->
+                    <!--android:layout_height="@dimen/list_image_height"-->
+                    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+                    <!--android:src="@drawable/avatar_temp"-->
+                    <!--android:visibility="visible"/>-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/list_image8"-->
+                    <!--android:layout_width="@dimen/list_image_width"-->
+                    <!--android:layout_height="@dimen/list_image_height"-->
+                    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+                    <!--android:src="@drawable/avatar_temp"-->
+                    <!--android:visibility="visible"/>-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/list_image9"-->
+                    <!--android:layout_width="@dimen/list_image_width"-->
+                    <!--android:layout_height="@dimen/list_image_height"-->
+                    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+                    <!--android:src="@drawable/avatar_temp"-->
+                    <!--android:visibility="visible"/>-->
+            <!--</TableRow>-->
+        <!--</TableLayout>-->
+
+        <com.example.saltwater.brandnewworld.NoScrollGridView
+            android:id="@+id/item_gridview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="15dp"
-            android:paddingRight="20dp"
-            android:stretchColumns="1">
-            <TableRow
-                android:visibility="visible">
-            <ImageView
-                android:id="@+id/list_image"
-                android:layout_width="@dimen/list_image_width"
-                android:layout_height="@dimen/list_image_height"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:src="@drawable/avatar_temp"
-                android:visibility="visible"/>
-            <ImageView
-                android:id="@+id/list_image2"
-                android:layout_width="@dimen/list_image_width"
-                android:layout_height="@dimen/list_image_height"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:src="@drawable/avatar_temp"
-                android:visibility="invisible"/>
-                <ImageView
-                    android:id="@+id/list_image3"
-                    android:layout_width="@dimen/list_image_width"
-                    android:layout_height="@dimen/list_image_height"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/avatar_temp"
-                    android:visibility="invisible"/>
-            </TableRow>
-            <TableRow
-                android:visibility="gone">
-                <ImageView
-                    android:id="@+id/list_image4"
-                    android:layout_width="@dimen/list_image_width"
-                    android:layout_height="@dimen/list_image_height"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/avatar_temp"
-                    android:visibility="visible"/>
-                <ImageView
-                    android:id="@+id/list_image5"
-                    android:layout_width="@dimen/list_image_width"
-                    android:layout_height="@dimen/list_image_height"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/avatar_temp"
-                    android:visibility="visible"/>
-                <ImageView
-                    android:id="@+id/list_image6"
-                    android:layout_width="@dimen/list_image_width"
-                    android:layout_height="@dimen/list_image_height"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/avatar_temp"
-                    android:visibility="visible"/>
-            </TableRow>
-            <TableRow
-                android:visibility="gone">
-                <ImageView
-                    android:id="@+id/list_image7"
-                    android:layout_width="@dimen/list_image_width"
-                    android:layout_height="@dimen/list_image_height"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/avatar_temp"
-                    android:visibility="visible"/>
-                <ImageView
-                    android:id="@+id/list_image8"
-                    android:layout_width="@dimen/list_image_width"
-                    android:layout_height="@dimen/list_image_height"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/avatar_temp"
-                    android:visibility="visible"/>
-                <ImageView
-                    android:id="@+id/list_image9"
-                    android:layout_width="@dimen/list_image_width"
-                    android:layout_height="@dimen/list_image_height"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/avatar_temp"
-                    android:visibility="visible"/>
-            </TableRow>
-        </TableLayout>
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="10dp">
+
+        </com.example.saltwater.brandnewworld.NoScrollGridView>
 
 
 
@@ -170,6 +181,7 @@
 
 
     <RelativeLayout
+        android:descendantFocusability="blocksDescendants"
         android:layout_width="match_parent"
         android:background="@color/white"
         android:paddingRight="20dp"
@@ -199,56 +211,17 @@
             android:layout_toRightOf="@id/list_good"/>
 
 
-        <Button
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@drawable/press_good"
+            android:clickable="true"
             android:id="@+id/list_button_good"
             android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:focusable="false"/>
 
     </RelativeLayout>
-
-    <LinearLayout
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:gravity="center"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:text="已经有"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            />
-
-        <TextView
-            android:id="@+id/list_number_comment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:background="@color/white"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="人评论啦!快去看看吧"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:background="@color/white"
-            />
-
-
-
-
-    </LinearLayout>
 
 
 </LinearLayout>

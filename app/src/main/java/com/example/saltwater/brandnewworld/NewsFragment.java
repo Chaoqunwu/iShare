@@ -33,7 +33,7 @@ public class NewsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FirstActivity activity = (FirstActivity) getActivity();
-                NewsActivity.actionStart(getActivity(),activity.getUserType());
+                NewsActivity.actionStart(getActivity(),activity.getUserType(),activity.getUserInfo());
             }
         });
 //        imageView2 = (ImageView) view.findViewById(R.id.img2);

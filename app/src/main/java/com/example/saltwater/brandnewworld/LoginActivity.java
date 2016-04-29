@@ -100,7 +100,6 @@ public class LoginActivity extends Activity {
                         editor.clear();
                     editor.commit();
 
-                    Log.d("fuck", username);
                     //测试用,固定家长为13958116070，教师为18958155002
                     if(username.equals("13958116070"))
                     {

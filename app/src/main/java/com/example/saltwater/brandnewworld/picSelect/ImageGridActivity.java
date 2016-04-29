@@ -71,9 +71,10 @@ public class ImageGridActivity extends Activity {
 				}
 
 				if (Bimp.act_bool) {
-					Intent intent = new Intent(ImageGridActivity.this,
-							PublishedActivity.class);
-					startActivity(intent);
+//					Intent intent = new Intent(ImageGridActivity.this,
+//							PublishedActivity.class);
+//					startActivity(intent);
+                    finish();
 					Bimp.act_bool = false;
 				}
 				for (int i = 0; i < list.size(); i++) {
@@ -81,6 +82,7 @@ public class ImageGridActivity extends Activity {
 						Bimp.drr.add(list.get(i));
 					}
 				}
+
 				finish();
 			}
 

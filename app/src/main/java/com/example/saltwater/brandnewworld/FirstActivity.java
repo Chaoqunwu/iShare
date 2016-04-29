@@ -10,9 +10,17 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
+import com.nostra13.universalimageloader.utils.StorageUtils;
 import com.special.ResideMenu.ResideMenu;
 import com.special.ResideMenu.ResideMenuItem;
 
+import java.io.File;
 import java.util.Map;
 
 /**
@@ -45,6 +53,8 @@ public class FirstActivity extends FragmentActivity implements View.OnClickListe
         Bundle bundle = getIntent().getExtras();
         userInfo = (InfoMap)bundle.getSerializable("userInfo");
         Log.d("fuuck",userInfo.get("name").toString());
+
+
     }
 
     private void setUpMenu() {

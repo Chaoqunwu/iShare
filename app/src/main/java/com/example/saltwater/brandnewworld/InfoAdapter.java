@@ -73,7 +73,6 @@ public class InfoAdapter extends ArrayAdapter<Map<String,Object>> {
         Map<String,Object> map = getItem(position);
         View view;
 
-
         //初始化组件
         if(convertView == null)
         {
@@ -121,11 +120,17 @@ public class InfoAdapter extends ArrayAdapter<Map<String,Object>> {
         viewHolder.numGood.setText(mData.get(position).get(KEY_NUMBERGOOD).toString());
 //        viewHolder.numComment.setText(mData.get(position).get(KEY_NUMBERCOMMENT).toString());
 
-//        View.OnTouchListener listener = new View.OnTouchListener()
-//        {
-//            private boolean image_record_out;
-//
-//        }
+
+        viewHolder.pressGood.setImageResource(R.drawable.press_good);
+
+        viewHolder.pressGood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewHolder.pressGood.setImageResource(R.drawable.good_after);
+            }
+        });
+
+
 
 
 
@@ -146,9 +151,6 @@ public class InfoAdapter extends ArrayAdapter<Map<String,Object>> {
         ImageView pressGood;
 
     }
-
-
-
 
 }
 

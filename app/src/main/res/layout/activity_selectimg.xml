@@ -32,6 +32,7 @@
     </RelativeLayout>
 
     <EditText
+        android:id="@+id/edit_dy"
         android:layout_width="fill_parent"
         android:layout_height="100dp"
         android:layout_margin="8dp"
@@ -40,7 +41,7 @@
         android:background="@null" >
     </EditText>
 
-    <GridView 
+    <com.example.saltwater.brandnewworld.NoScrollGridView
         android:id="@+id/noScrollgridview"
         android:layout_width="290dp"
         android:layout_height="350dp"
@@ -49,6 +50,6 @@
         android:numColumns="4"
         android:scrollbars="none"
         android:verticalSpacing="5dp" >
-    </GridView>
+    </com.example.saltwater.brandnewworld.NoScrollGridView>
 
 </LinearLayout>

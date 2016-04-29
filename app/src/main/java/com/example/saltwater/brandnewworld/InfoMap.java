@@ -15,6 +15,11 @@ public class InfoMap implements Serializable {
 
     public InfoMap() {map = new HashMap<String,Object>();}
 
+    public InfoMap(Map<String,Object> m)
+    {
+        map = m;
+    }
+
     public void put(String s,Object o)
     {
         map.put(s,o);
@@ -23,5 +28,10 @@ public class InfoMap implements Serializable {
     public Object get(String s)
     {
         return map.get(s);
+    }
+
+    public Map<String,Object> getMap()
+    {
+        return map;
     }
 }

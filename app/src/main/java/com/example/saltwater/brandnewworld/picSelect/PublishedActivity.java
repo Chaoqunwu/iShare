@@ -15,6 +15,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,37 +23,53 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import com.example.saltwater.brandnewworld.InfoAdapter;
+import com.example.saltwater.brandnewworld.InfoMap;
+import com.example.saltwater.brandnewworld.NoScrollGridView;
 import com.example.saltwater.brandnewworld.R;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 public class PublishedActivity extends Activity {
 
 	private GridView noScrollgridview;
 	private GridAdapter adapter;
 	private TextView activity_selectimg_send;
+	private InfoMap userInfo;
+    private EditText editDy;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_selectimg);
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        userInfo = (InfoMap) bundle.getSerializable("userInfo");
 		Init();
 	}
 
+
 	public void Init() {
-		noScrollgridview = (GridView) findViewById(R.id.noScrollgridview);
+        editDy = (EditText) findViewById(R.id.edit_dy);
+		noScrollgridview = (NoScrollGridView) findViewById(R.id.noScrollgridview);
 		noScrollgridview.setSelector(new ColorDrawable(Color.TRANSPARENT));
 		adapter = new GridAdapter(this);
 		adapter.update();
@@ -60,7 +77,8 @@ public class PublishedActivity extends Activity {
 		noScrollgridview.setOnItemClickListener(new OnItemClickListener() {
 
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-					long arg3) {
+									long arg3) {
+                hideKeyboard();
 				if (arg2 == Bimp.bmp.size()) {
 					new PopupWindows(PublishedActivity.this, noScrollgridview);
 				} else {
@@ -71,21 +89,45 @@ public class PublishedActivity extends Activity {
 				}
 			}
 		});
+
 		activity_selectimg_send = (TextView) findViewById(R.id.activity_selectimg_send);
 		activity_selectimg_send.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-				List<String> list = new ArrayList<String>();				
+				List<String> list = new ArrayList<String>();
 				for (int i = 0; i < Bimp.drr.size(); i++) {
-					String Str = Bimp.drr.get(i).substring( 
+					String Str = Bimp.drr.get(i).substring(
 							Bimp.drr.get(i).lastIndexOf("/") + 1,
 							Bimp.drr.get(i).lastIndexOf("."));
-					list.add(FileUtils.SDPATH+Str+".JPEG");				
+					list.add(FileUtils.SDPATH + Str + ".JPEG");
 				}
 				// 高清的压缩图片全部就在  list 路径里面了
 				// 高清的压缩过的 bmp 对象  都在 Bimp.bmp里面
-				// 完成上传服务器后 .........
-				FileUtils.deleteDir();
+
+                Intent intentBack = new Intent();
+                Bundle bundleBack = new Bundle();
+                //组装返回的InfoMap
+                List<String> listTemp = list;
+//                List<Bitmap> bitmaps = Bimp.bmp;
+                InfoMap map = new InfoMap();
+                map.put(InfoAdapter.KEY_AVATAR, R.drawable.testxiaoxin);
+                map.put(InfoAdapter.KEY_NAME,userInfo.get("name"));//userInfo.get("name"));
+                //时间应向服务器获取
+                map.put(InfoAdapter.KEY_DATE, "2016.4.6");
+                map.put(InfoAdapter.KEY_IMAGE,listTemp);
+                map.put(InfoAdapter.KEY_DESCRIPTION,editDy.getText().toString());
+                map.put(InfoAdapter.KEY_NUMBERGOOD, 0);
+                map.put(InfoAdapter.KEY_NUMBERCOMMENT, 0);
+                //组装完成 返回数据
+                bundleBack.putSerializable("infoMap",map);
+                intentBack.putExtras(bundleBack);
+                setResult(RESULT_OK,intentBack);
+
+                        // 完成上传服务器后 .........
+//                        FileUtils.deleteDir();
+
+				Bimp.bmp.clear();
+                finish();
 			}
 		});
 	}
@@ -229,6 +271,15 @@ public class PublishedActivity extends Activity {
 		super.onRestart();
 	}
 
+    private void hideKeyboard() {
+        View view = getCurrentFocus();
+        if (view != null) {
+            ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE)).
+                    hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
+    }
+
+
 	public class PopupWindows extends PopupWindow {
 
 		public PopupWindows(Context mContext, View parent) {
@@ -337,9 +388,23 @@ public class PublishedActivity extends Activity {
 		}
 	}
 
-	public static void actionStart(Context context) {
-		Intent intent = new Intent(context, PublishedActivity.class);
-		context.startActivity(intent);
-	}
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+		Bimp.bmp.clear();
+        FileUtils.deleteDir();
+    }
+
+
+//	public static void actionStart(Context context,String type,InfoMap userInfo)
+//	{
+//		Intent intent = new Intent(context,PublishedActivity.class);
+//		intent.putExtra("userType", type);
+//		Bundle bundle = new Bundle();
+//		bundle.putSerializable("userInfo",userInfo);
+//		intent.putExtras(bundle);
+//		context.startActivity(intent);
+//	}
 
 }

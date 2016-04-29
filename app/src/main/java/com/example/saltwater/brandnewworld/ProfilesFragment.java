@@ -89,10 +89,10 @@ public class ProfilesFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-                        .setTitleText("Are you sure?")
+                        .setTitleText("确定?")
                         .setContentText("更新个人信息")
-                        .setConfirmText("Yes,I do!")
-                        .setCancelText("No,原来的挺好！")
+                        .setConfirmText("是的")
+                        .setCancelText("不,我再考虑一下")
                         .showCancelButton(true)
                         .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
                             @Override
@@ -106,8 +106,8 @@ public class ProfilesFragment extends Fragment {
                             public void onClick(SweetAlertDialog sDialog) {
                                 // reuse previous dialog instance
                                 sDialog.setTitleText("信息上传完毕")
-                                        .setContentText("您的ishare个人信息更新成功！")
-                                        .setConfirmText("OK")
+                                        .setContentText("您的iShare个人信息更新成功！")
+                                        .setConfirmText("好的")
                                         .showCancelButton(false)
                                         .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                             @Override

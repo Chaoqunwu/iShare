@@ -32,10 +32,10 @@ public class RegisterActivity extends Activity {
             public void onClick(View v) {
 
                 new SweetAlertDialog(RegisterActivity.this, SweetAlertDialog.WARNING_TYPE)
-                        .setTitleText("Are you sure?")
+                        .setTitleText("确定?")
                         .setContentText("同意app的使用条件和隐私声明")
-                        .setConfirmText("Yes,I do!")
-                        .setCancelText("No,我已经注册过了！")
+                        .setConfirmText("是的")
+                        .setCancelText("不，我再考虑一下")
                         .showCancelButton(true)
                         .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
                             @Override
@@ -47,9 +47,9 @@ public class RegisterActivity extends Activity {
                             @Override
                             public void onClick(SweetAlertDialog sDialog) {
                                 // reuse previous dialog instance
-                                sDialog.setTitleText("快去登入吧！")
-                                        .setContentText("您的ishare账号注册成功！")
-                                        .setConfirmText("OK")
+                                sDialog.setTitleText("快去登陆吧！")
+                                        .setContentText("您的iShare账号注册成功！")
+                                        .setConfirmText("好的")
                                         .showCancelButton(false)
                                         .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                             @Override
@@ -74,7 +74,5 @@ public class RegisterActivity extends Activity {
                 vCode.setText("验证码已发送到手机，请查收");
             }
         });
-
-
     }
 }
